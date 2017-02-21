@@ -1,0 +1,12 @@
+# CHANGE
+user=wisonic
+
+# CHANGE:
+seafile_dir=/home/nichole/wisonic
+script_path=${seafile_dir}/seafile-server-latest
+seafile_init_log=${seafile_dir}/logs/seafile.init.log
+seahub_init_log=${seafile_dir}/logs/seahub.init.log
+
+# CHANGE if use fastcgi
+fastcgi=false
+fastcgi_port=8000
