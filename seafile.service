@@ -1,0 +1,16 @@
+#put it in /lib/systemd/system 
+
+[Unit]
+Description=seafile
+After=network.target mariadb.service
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+ExecStart=/root/wisonic/seafile-server-latest/seafile.sh start
+ExecStop=/root/wisonic/seafile-server-latest/seafile.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

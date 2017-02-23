@@ -1,0 +1,16 @@
+#put it in /lib/systemd/system 
+
+[Unit]
+Description=seahub
+After=network.target seafile.service
+
+[Service]
+Type=oneshot
+ExecStart=/root/wisonic/seafile-server-latest/seahub.sh start
+ExecStop=/root/wisonic/seafile-server-latest/seahub.sh stop
+RemainAfterExit=yes
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

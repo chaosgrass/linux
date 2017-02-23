@@ -38,11 +38,10 @@ systemctl enable mariadb
 
 #【邮件服务设置】 https://manual-cn.seafile.com/config/sending_email.html
 
-# TODO: Windows客户端权限问题
-
 chown 
 
-#seafile开机启动：
+
+#seafile开机启动，未成功
 #   按照 https://manual-cn.seafile.com/deploy/start_seafile_at_system_bootup.html修改/etc/rc.local
 chmod +x /etc/rc.d/rc.local
 
@@ -59,3 +58,11 @@ service seahub start
 
 
 
+#第二种开机自启动方式，成功，参考
+#   systemd、upstart和system V
+#   http://blog.csdn.net/kumu_linux/article/details/7653802
+#   Seafile Server 安裝實錄
+#   http://jamyy.us.to/blog/2015/05/7442.html
+#   其它
+#   http://linux.it.net.cn/CentOS/fast/2015/0507/15184.html
+#   http://linux.it.net.cn/CentOS/fast/2015/0507/15184.html
